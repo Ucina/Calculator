@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang=PL>
+<head>
+  <meta charset=UTF-8>
+  <title>Kalkulator</title>
+  <style>
+  h3{
+    font-size: 40px;
+    text-align: center;
+    font-family: bahnschrift;
+  }
+body {
+  background-color: gray;
+}
+.rozmiar
+{
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+  border: 3px solid #0059b3;
+  background-color: #00264d;
+  width: 400px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.liczby
+{
+
+  margin-left: 80px;
+
+
+margin-top:30px;
+}
+.button
+{
+
+  background-color: #f1f1f1;
+  color: black;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border: none;
+      outline:none;
+}
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+  </style>
+<script>
+
+function liczba(num)
+{
+  document.form.textview.value=document.form.textview.value+num
+}
+function suma()
+{
+  var x=document.form.textview.value;
+  if(x)
+  {
+
+  document.form.textview.value=eval(x)
+}
+}
+
+function czyszczenie()
+{
+
+  document.form.textview.value="";
+}
+
+
+</script>
+</head>
+ <body>
+   <h3>Kalkulator</h3>
+   <div class="rozmiar">
+<form name="form">
+<input class="textview" disabled="disabled" name="textview" style="width:392px; height: 50px; font-size: 30px; text-align: right; background-color: white; color: #00264d ; border-top-left-radius:14px; border-top-right-radius:14px;" >
+</form>
+  <div class="liczby">
+<input class=button type=button value="1" onclick="liczba(1)"  style="width:70px; height: 70px; font-size: 40px; margin-right:15px;   ">
+<input class=button type=button value=2 onclick="liczba(2)"  style="width:70px; height: 70px; font-size: 40px;">
+<input class=button type=button value=3 onclick="liczba(3)"  style="width:70px; height: 70px; font-size: 40px; margin-left:15px;">
+<br>
+<input class=button type=button value=4 onclick="liczba(4)"  style=" margin-top: 20px; width:70px; height: 70px; font-size: 40px; margin-right:15px;  ">
+<input class=button type=button value=5 onclick="liczba(5)"  style="width:70px; height: 70px; font-size: 40px;">
+<input class=button type=button value=6 onclick="liczba(6)"  style="width:70px; height: 70px; font-size: 40px; margin-left:15px;">
+
+<br>
+<input class=button  type=button value=7 onclick="liczba(7)"  style=" margin-top: 20px; width:70px; height: 70px; font-size: 40px; margin-right:15px;  ">
+<input class=button type=button value=8 onclick="liczba(8)"  style="  width:70px; height: 70px; font-size: 40px;">
+<input class=button type=button value=9 onclick="liczba(9)"  style=" width:70px; height: 70px; font-size: 40px; margin-left:15px;">
+
+<br>
+<input class=button type=button value="-" onclick="liczba('-')"   style= " margin-top: 20px; width:70px; height: 70px; font-size: 40px; margin-right:15px; ">
+<input class=button type=button value="+" onclick="liczba('+')"  style= "width:70px; height: 70px; font-size: 40px; ">
+<input class=button type=button value="=" onclick="suma()"  id=od style= "width:70px; height: 70px; font-size: 40px; margin-left:15px;">
+<br>
+<br>
+
+<input class=button type=button value="Resetuj" onclick="czyszczenie()"   style= "width:240px; height: 30px;  margin-right:20px; font-family: bahnschrift; font-size: 15px; ">
+
+</div>
+
+</div>
+ </body>
+ </html>
